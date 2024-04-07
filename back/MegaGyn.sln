@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MegaGyn.Domain", "MegaGyn.Domain\MegaGyn.Domain.csproj", "{9E4D7DCE-9517-4D47-B2F3-0E5B21BC6587}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MegaGyn.Infra.Data", "MegaGyn.Infra.Data\MegaGyn.Infra.Data.csproj", "{C12D32D9-7CF1-43D9-97F2-83E5D55F0826}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MegaGyn.API", "MegaGyn.API\MegaGyn.API.csproj", "{C7794735-D028-438A-B521-E74E3E880E25}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E4D7DCE-9517-4D47-B2F3-0E5B21BC6587}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E4D7DCE-9517-4D47-B2F3-0E5B21BC6587}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E4D7DCE-9517-4D47-B2F3-0E5B21BC6587}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E4D7DCE-9517-4D47-B2F3-0E5B21BC6587}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C12D32D9-7CF1-43D9-97F2-83E5D55F0826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C12D32D9-7CF1-43D9-97F2-83E5D55F0826}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C12D32D9-7CF1-43D9-97F2-83E5D55F0826}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C12D32D9-7CF1-43D9-97F2-83E5D55F0826}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7794735-D028-438A-B521-E74E3E880E25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7794735-D028-438A-B521-E74E3E880E25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7794735-D028-438A-B521-E74E3E880E25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7794735-D028-438A-B521-E74E3E880E25}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
