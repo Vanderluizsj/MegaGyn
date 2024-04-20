@@ -1,0 +1,38 @@
+#btnEditar {
+    margin-right: 0.5rem;
+}
+
+.button {
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(13.5px);
+    -webkit-backdrop-filter: blur(13.5px);
+    border-radius: 0.7rem;
+    border: 0.1rem solid rgba(255, 255, 255, 0.18);
+
+}
+
+.card {
+    background-size: cover;
+    /* Para cobrir todo o card */
+    background-position: center;
+    /* Centralizar a imagem */
+    
+    height: 25rem;
+    width: 22.4rem;
+    /* Altura do card */
+}
+.card-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com opacidade */
+    padding: 20px;
+    border-radius: 0 0 5px 5px;
+}
+#aluno {
+    background-image: url(../../../assets/Dia-do-Desafio-Academia-Em-Casa-iStock-1270225717.jpg);
+}
+#exercicio{
+    background-image: url(../../../assets/istockphoto-1392310150-612x612.jpg);
+}
+#treino{    
+    background-image: url(../../../assets/modelo-de-cronograma-de-rotina-de-treino-gradiente_23-2149661227.avif);
+}

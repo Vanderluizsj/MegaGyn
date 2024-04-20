@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  public widthImg: number = 7;
+  public marginImg: number = 1;
   constructor() { }
 
   ngOnInit() {
