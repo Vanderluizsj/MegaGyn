@@ -16,7 +16,7 @@ export class ExercicioService {
     return this.http.get<IExercicio[]>(this.baseURL);
   }
 
-  public getExercicioById(id: string): Observable<IExercicio> {
+  public getExercicioById(id: Number): Observable<IExercicio> {
     return this.http.get<IExercicio>(`${this.baseURL}/${id}`);
   }
 
@@ -24,11 +24,11 @@ export class ExercicioService {
     return this.http.post(this.baseURL, exercicio);
   }
   
-  public deleteExercicio(codigo: string): Observable<any> {
-    const url = `${this.baseURL}/${codigo}`;
+  public deleteExercicio(id: Number): Observable<any> {
+    const url = `${this.baseURL}/${id}`;
     return this.http.delete(url);
   }
-  public putExercicio(codigo: string, exercicio: IExercicio): Observable<IExercicio> {
+  public putExercicio(id: Number, exercicio: IExercicio): Observable<IExercicio> {
     return this.http
       .put<IExercicio>(this.baseURL, exercicio)
       .pipe(catchError(this.handleError));

@@ -1,3 +1,125 @@
-<p>
-  treino works!
-</p>
+<div class="card shadow-sm">
+  <div class="row">
+    <div class="col-md-8">
+      <form [formGroup]="form">
+        <div class="pb-2 d-block d-md-none p-3 text-center">
+          <h3 class="border-bottom">Cadastro de Exercicio</h3>
+        </div>
+        <div class="p-3">
+          <div class="form-row">
+            <div class="form-group col-md-8">
+              <label>Id:</label>
+              <input
+                type="Number"
+                class="form-control is-invalid"
+                [ngClass]="{
+                  'is-invalid': fControl.id.errors && fControl.id.touched
+                }"
+                formControlName="id"
+                placeholder="Insira o id do exercicio"
+              />
+              <div
+                *ngIf="fControl.id.errors?.required"
+                class="invalid-feedback"
+              >
+                O código é obrigatório!
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-8">
+              <label>Nome do Exercicio:</label>
+              <input
+                type="text"
+                class="form-control is-invalid"
+                [ngClass]="{
+                  'is-invalid': fControl.nome.errors && fControl.nome.touched
+                }"
+                formControlName="nome"
+                placeholder="Informe o nome do exercicio"
+              />
+              <div
+                *ngIf="fControl.nome.errors?.required"
+                class="invalid-feedback"
+              >
+                O campo nome é obrigatório!
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-8">
+              <label>Series: </label>
+              <input
+                type="Number"
+                class="form-control is-invalid"
+                [ngClass]="{
+                  'is-invalid':
+                    fControl.series.errors && fControl.series.touched
+                }"
+                formControlName="series"
+                placeholder="Informe a quantidade de series"
+              />
+              <div
+                *ngIf="fControl.series.errors?.required"
+                class="invalid-feedback"
+              >
+                O campo series é obrigatório!
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-8">
+              <label>Repetições: </label>
+              <input
+                type="Number"
+                class="form-control is-invalid"
+                [ngClass]="{
+                  'is-invalid':
+                    fControl.repeticoes.errors && fControl.repeticoes.touched
+                }"
+                formControlName="repeticoes"
+                placeholder="Informe o numero de repetições"
+              />
+              <div
+                *ngIf="fControl.repeticoes.errors?.required"
+                class="invalid-feedback"
+              >
+                O numero de repetições é obrigatório!
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex">
+              <button
+                class="btn btn-outline-secondary me-3"
+                (click)="resetForm()"
+              >
+                Cancelar Alteração
+              </button>
+              <button
+                class="btn btn-success"
+                routerLink="../exercicio"
+                (click)="salvarAlteracao()"
+              >
+                <!--<span class="spinner-border spinner-border-sm mr-1"></span>-->
+                Salvar Exercicio
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-md-4 d-none d-md-block">
+      <div class="text-center col-md-12 my-auto side-heder">
+        <h1>Cadastro de Exercicio</h1>
+        <img
+          src="../../../assets/exercicio-de-estocada.avif"
+          class="my-4"
+          alt=""
+          width="100%"
+        />
+      </div>
+    </div>
+  </div>
+</div>

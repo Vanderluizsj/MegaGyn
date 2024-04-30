@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { ExercicioService } from './services/exercicioService.service';
+import { TreinoService } from './services/treinoService.service';
+import { AlunoService } from './services/alunoService.service';
 
 import { AlunoComponent } from './components/aluno/aluno.component';
 import { ExercicioComponent } from './components/exercicio/exercicio.component';
@@ -37,7 +39,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
   ],
   providers: [
-    ExercicioService
+    ExercicioService,
+    TreinoService,
+    AlunoService,
   ],
   bootstrap: [AppComponent]
 })
