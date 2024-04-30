@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MegaGyn.Domain;
-using MegaGyn.Domain.Repostories;
+using MegaGyn.Domain.Repositories;
+using MegaGyn.Infra.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MegaGyn.API.Controllers
@@ -12,14 +13,14 @@ namespace MegaGyn.API.Controllers
     /// Controlador para lidar com operações relacionadas aos alunos.
     /// </summary>
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/aluno")]
     public class AlunoController : ControllerBase
     {
-        private readonly IAlunoRepository _alunoRepository;
+        private IAlunoRepository _alunoRepository = new AlunoRepository();
 
-        public AlunoController(IAlunoRepository alunoRepository)
+        public AlunoController()
         {
-            _alunoRepository = alunoRepository;
+            _alunoRepository = new AlunoRepository();
         }
         /// <summary>
         /// Adiciona um novo aluno.
@@ -29,23 +30,57 @@ namespace MegaGyn.API.Controllers
         [HttpPost]
         public IActionResult AdicionarAluno([FromBody] Aluno aluno)
         {
-            _alunoRepository.Adicionar(aluno);
-            return Ok();
+            try{
+                
+                _alunoRepository.Adicionar(aluno);
+                return StatusCode(201);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+            
+        }
+         /// <summary>
+        /// Busca todos os alunos.
+        /// </summary>
+        /// <returns>Uma lista de todos os alunos.</returns>
+        [HttpGet]
+        [Route("alunos")]
+        public IActionResult BuscarTodos()
+        {
+            try
+            {
+                return Ok(_alunoRepository.BuscarTodos());
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
         /// <summary>
         /// Busca um aluno pelo ID.
         /// </summary>
         /// <param name="id">O ID do aluno.</param>
         /// <returns>O aluno encontrado.</returns>
-        [HttpGet("{id}")]
+        [HttpGet]
+        [Route("{id}")]
         public IActionResult BuscarPorId(int id)
         {
-            var aluno = _alunoRepository.BuscarPorId(id);
-            if (aluno == null)
+            try
             {
-                return NotFound();
+                var aluno = _alunoRepository.BuscarPorId(id);
+                if (aluno == null)
+                {
+                    return NotFound("O aluno não foi encontrado!");
+                }
+
+                return StatusCode(200, aluno);
             }
-            return Ok(aluno);
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
         /// <summary>
         /// Atualiza as informações de um aluno.
@@ -53,44 +88,44 @@ namespace MegaGyn.API.Controllers
         /// <param name="editado">O aluno com as informações atualizadas.</param>
         /// <returns>O resultado da operação.</returns>
         [HttpPut]
+        [Route("alunos")]
         public IActionResult Atualizar([FromBody]Aluno editado)
         {
             try
             {
                 //var clienteBuscado = editado.Cpf;
                 _alunoRepository.Atualizar(editado.Id);
-                return Ok();
+                return StatusCode(200, editado);
             }
             catch (Exception e)
             {
-                return StatusCode(500, e.Message);
+                return StatusCode(400);
             }
-        }
-        /// <summary>
-        /// Busca todos os alunos.
-        /// </summary>
-        /// <returns>Uma lista de todos os alunos.</returns>
-        [HttpGet]
-        public IActionResult BuscarTodos()
-        {
-            var alunos = _alunoRepository.BuscarTodos();
-            return Ok(alunos);
-        }
+        }       
         /// <summary>
         /// Deleta um aluno pelo ID.
         /// </summary>
         /// <param name="id">O ID do aluno a ser deletado.</param>
         /// <returns>O resultado da operação.</returns>
-        [HttpDelete("{id}")]
+        [HttpDelete]
+        [Route("{id}")]
         public IActionResult Deletar(int id)
         {
-            var alunoEncontrado = _alunoRepository.BuscarPorId(id);
-            if (alunoEncontrado == null)
+            try
             {
-                return NotFound();
+                var alunoEncontrado = _alunoRepository.BuscarPorId(id);
+                if (alunoEncontrado == null)
+                {
+                    return NotFound();
+                }
+                _alunoRepository.Deletar(id);
+                return StatusCode(200);
             }
-            _alunoRepository.Deletar(id);
-            return Ok();
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }          
+            
         }
     }
 }

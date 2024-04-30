@@ -19,7 +19,7 @@
     /* Centralizar a imagem */
     
     height: 25rem;
-    width: 22.4rem;
+    width: 20rem;
     /* Altura do card */
 }
 .card-content {
@@ -29,10 +29,13 @@
 }
 #aluno {
     background-image: url(../../../assets/Dia-do-Desafio-Academia-Em-Casa-iStock-1270225717.jpg);
+    opacity: 0.7;
 }
 #exercicio{
     background-image: url(../../../assets/istockphoto-1392310150-612x612.jpg);
+    opacity: 0.7;
 }
 #treino{    
     background-image: url(../../../assets/modelo-de-cronograma-de-rotina-de-treino-gradiente_23-2149661227.avif);
+    opacity: 0.7;
 }

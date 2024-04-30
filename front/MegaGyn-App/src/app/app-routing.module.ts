@@ -5,11 +5,13 @@ import { AlunoComponent } from './components/aluno/aluno.component';
 import { TreinoComponent } from './components/treino/treino.component';
 import { ExercicioComponent } from './components/exercicio/exercicio.component';
 
-const routes: Routes = [
+const routes: Routes = [   
   {path: 'home', component: HomeComponent},
   {path: 'aluno', component: AlunoComponent},
   {path: 'treino', component: TreinoComponent},
   {path: 'exercicio', component: ExercicioComponent},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: '**', redirectTo: 'home', pathMatch: 'full'},
 ];
 
 @NgModule({

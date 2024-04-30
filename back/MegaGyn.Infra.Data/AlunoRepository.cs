@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MegaGyn.Domain;
-using MegaGyn.Domain.Repostories;
+using MegaGyn.Domain.Repositories;
 using MegaGyn.Infra.Data.DAO;
 
 namespace MegaGyn.Infra.Data
@@ -28,6 +28,15 @@ namespace MegaGyn.Infra.Data
         public void Adicionar(Aluno aluno)
         {
             _alunoDao.AdicionarAluno(aluno);
+            
+        }
+        /// <summary>
+        /// Busca todos os alunos.
+        /// </summary>
+        /// <returns>Uma lista de todos os alunos.</returns>
+        public List<Aluno> BuscarTodos()
+        {
+            return _alunoDao.BuscaTodos();
         }
         /// <summary>
         /// Busca um aluno pelo ID.
@@ -35,7 +44,8 @@ namespace MegaGyn.Infra.Data
         /// <param name="id">O ID do aluno a ser buscado.</param>
         /// <returns>O aluno encontrado.</returns>
         public Aluno BuscarPorId(int id)
-        {
+        {          
+
             return _alunoDao.BuscarPorId(id);
         }
         /// <summary>
@@ -47,14 +57,7 @@ namespace MegaGyn.Infra.Data
             var alunoEncontrado = _alunoDao.BuscarPorId(id);
             _alunoDao.AtualizarAluno(alunoEncontrado);
         }
-        /// <summary>
-        /// Busca todos os alunos.
-        /// </summary>
-        /// <returns>Uma lista de todos os alunos.</returns>
-        public List<Aluno> BuscarTodos()
-        {
-            return _alunoDao.BuscaTodos();
-        }
+        
         /// <summary>
         /// Deleta um aluno pelo ID.
         /// </summary>

@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MegaGyn.Domain;
-using MegaGyn.Domain.Repostories;
+using MegaGyn.Domain.Repositories;
+using MegaGyn.Infra.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MegaGyn.API.Controllers
@@ -12,14 +13,14 @@ namespace MegaGyn.API.Controllers
     /// Controlador para lidar com operações relacionadas aos exercícios.
     /// </summary>
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/exercicio")]
     public class ExercicioController : ControllerBase
     {
-        private readonly IExercicioRepository _exercicioRepository;
+        private IExercicioRepository _exercicioRepository = new ExercicioRepository();
 
-        public ExercicioController(IExercicioRepository exercicioRepository)
+        public ExercicioController()
         {
-            _exercicioRepository = exercicioRepository;
+            _exercicioRepository = new ExercicioRepository();
         }
         /// <summary>
         /// Adiciona um novo exercício.

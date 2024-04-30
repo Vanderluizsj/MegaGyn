@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MegaGyn.Domain;
-using MegaGyn.Domain.Repostories;
+using MegaGyn.Domain.Repositories;
+using MegaGyn.Infra.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MegaGyn.API.Controllers
 {
-     /// <summary>
+    /// <summary>
     /// Controlador para lidar com operações relacionadas aos treinos.
     /// </summary>
     [ApiController]
-    [Route("api/[controller]")]
-    public class treinoController : ControllerBase
+    [Route("api/treino")]
+    public class TreinoController : ControllerBase
     {
-        private readonly ITreinoRepository _treinoRepository;
+        private ITreinoRepository _treinoRepository = new TreinoRepository();
 
-        public treinoController(ITreinoRepository treinoRepository)
+        public TreinoController()
         {
-            _treinoRepository = treinoRepository;
+            _treinoRepository = new TreinoRepository();
         }
         /// <summary>
         /// Adiciona um novo treino.
@@ -27,7 +28,7 @@ namespace MegaGyn.API.Controllers
         /// <param name="treino">O treino a ser adicionado.</param>
         /// <returns>O resultado da operação.</returns>
         [HttpPost]
-        public IActionResult Adicionartreino([FromBody] Treino treino)
+        public IActionResult AdicionarTreino([FromBody] Treino treino)
         {
             _treinoRepository.Adicionar(treino);
             return Ok();

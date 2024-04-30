@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MegaGyn.Domain;
-using MegaGyn.Domain.Repostories;
+using MegaGyn.Domain.Repositories;
 using MegaGyn.Infra.Data.DAO;
 
 namespace MegaGyn.Infra.Data
