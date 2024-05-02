@@ -18,12 +18,15 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { NavComponent } from './shared/nav/nav.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { NovoAlunoComponent } from './components/aluno/novoAluno/novoAluno.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AlunoComponent,
+    NovoAlunoComponent,
     ExercicioComponent,
     TreinoComponent,
     HomeComponent,

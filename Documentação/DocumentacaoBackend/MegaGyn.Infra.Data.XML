@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MegaGyn.Infra.Data</name>
+    </assembly>
+    <members>
+        <member name="T:MegaGyn.Infra.Data.AlunoRepository">
+            <summary>
+            Implementação do repositório de alunos.
+            </summary>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.AlunoRepository.#ctor">
+            <summary>
+            Construtor padrão que inicializa o AlunoDAO.
+            </summary>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.AlunoRepository.Adicionar(MegaGyn.Domain.Aluno)">
+            <summary>
+            Adiciona um novo aluno.
+            </summary>
+            <param name="aluno">O aluno a ser adicionado.</param>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.AlunoRepository.BuscarTodos">
+            <summary>
+            Busca todos os alunos.
+            </summary>
+            <returns>Uma lista de todos os alunos.</returns>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.AlunoRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um aluno pelo ID.
+            </summary>
+            <param name="id">O ID do aluno a ser buscado.</param>
+            <returns>O aluno encontrado.</returns>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.AlunoRepository.Atualizar(System.Int32)">
+            <summary>
+            Atualiza as informações de um aluno.
+            </summary>
+            <param name="id">O ID do aluno a ser atualizado.</param>        
+        </member>
+        <member name="M:MegaGyn.Infra.Data.AlunoRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um aluno pelo ID.
+            </summary>
+            <param name="id">O ID do aluno a ser deletado.</param>
+        </member>
+        <member name="T:MegaGyn.Infra.Data.DAO.AlunoDAO">
+            <summary>
+            Classe responsável por operações de acesso a dados relacionadas aos alunos.
+            </summary>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.DAO.AlunoDAO.#ctor">
+            <summary>
+            Construtor padrão da classe AlunoDAO.
+            </summary>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.DAO.AlunoDAO.AdicionarAluno(MegaGyn.Domain.Aluno)">
+            <summary>
+            Adiciona um novo aluno ao banco de dados.
+            </summary>
+            <param name="novoAluno">Objeto Aluno a ser adicionado.</param>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.DAO.AlunoDAO.BuscaTodos">
+            <summary>
+            Retorna uma lista de todos os alunos no banco de dados.
+            </summary>
+            <returns>Lista de objetos Aluno.</returns>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.DAO.AlunoDAO.DeletarAluno(MegaGyn.Domain.Aluno)">
+            <summary>
+            Deleta um aluno do banco de dados.
+            </summary>
+            <param name="alunoBuscado">Objeto Aluno a ser deletado.</param>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.DAO.AlunoDAO.AtualizarAluno(MegaGyn.Domain.Aluno)">
+            <summary>
+            Atualiza as informações de um aluno no banco de dados.
+            </summary>
+            <param name="alunoBuscado">Objeto Aluno com as informações atualizadas.</param>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.DAO.AlunoDAO.BuscaPorTexto(System.String)">
+            <summary>
+            Busca por alunos com base em um texto de pesquisa.
+            </summary>
+            <param name="nome">Texto a ser usado como critério de pesquisa.</param>
+            <returns>Lista de objetos Aluno que correspondem ao critério de pesquisa.</returns>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.DAO.AlunoDAO.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um aluno por seu ID único.
+            </summary>
+            <param name="id">ID único do aluno.</param>
+            <returns>Objeto Aluno correspondente ao ID fornecido.</returns>
+        </member>
+        <member name="T:MegaGyn.Infra.Data.DAO.ExercicioDAO">
+            <summary>
+            Classe responsável por operações de acesso a dados relacionadas aos exercícios.
+            </summary>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.DAO.ExercicioDAO.#ctor">
+            <summary>
+            Construtor padrão da classe ExercicioDAO.
+            </summary>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.DAO.ExercicioDAO.AdicionarExercicio(MegaGyn.Domain.Exercicio)">
+            <summary>
+            Adiciona um novo exercício ao banco de dados.
+            </summary>
+            <param name="novoExercicio">Objeto Exercicio a ser adicionado.</param>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.DAO.ExercicioDAO.BuscaTodos">
+            <summary>
+            Retorna uma lista de todos os exercícios no banco de dados.
+            </summary>
+            <returns>Lista de objetos Exercicio.</returns>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.DAO.ExercicioDAO.DeletarExercicio(MegaGyn.Domain.Exercicio)">
+            <summary>
+            Deleta um exercício do banco de dados.
+            </summary>
+            <param name="exercicioBuscado">Objeto Exercicio a ser deletado.</param>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.DAO.ExercicioDAO.AtualizarExercicio(MegaGyn.Domain.Exercicio)">
+            <summary>
+            Atualiza as informações de um exercício no banco de dados.
+            </summary>
+            <param name="exercicioBuscado">Objeto Exercicio com as informações atualizadas.</param>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.DAO.ExercicioDAO.BuscaPorTexto(System.String)">
+            <summary>
+            Busca por exercícios com base em um texto de pesquisa.
+            </summary>
+            <param name="nome">Texto a ser usado como critério de pesquisa.</param>
+            <returns>Lista de objetos Exercicio que correspondem ao critério de pesquisa.</returns>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.DAO.ExercicioDAO.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um exercício por seu ID único.
+            </summary>
+            <param name="id">ID único do exercício.</param>
+            <returns>Objeto Exercicio correspondente ao ID fornecido.</returns>
+        </member>
+        <member name="T:MegaGyn.Infra.Data.DAO.TreinoDAO">
+            <summary>
+            Classe responsável por operações de acesso a dados relacionadas aos treinos.
+            </summary>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.DAO.TreinoDAO.#ctor">
+            <summary>
+            Construtor padrão da classe TreinoDAO.
+            </summary>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.DAO.TreinoDAO.AdicionarTreino(MegaGyn.Domain.Treino)">
+            <summary>
+            Adiciona um novo treino ao banco de dados.
+            </summary>
+            <param name="novoTreino">Objeto Treino a ser adicionado.</param>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.DAO.TreinoDAO.BuscaTodos">
+            <summary>
+            Retorna uma lista de todos os treinos no banco de dados.
+            </summary>
+            <returns>Lista de objetos Treino.</returns>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.DAO.TreinoDAO.DeletarTreino(MegaGyn.Domain.Treino)">
+            <summary>
+            Deleta um treino do banco de dados.
+            </summary>
+            <param name="treinoBuscado">Objeto Treino a ser deletado.</param>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.DAO.TreinoDAO.AtualizarTreino(MegaGyn.Domain.Treino)">
+            <summary>
+            Atualiza as informações de um treino no banco de dados.
+            </summary>
+            <param name="treinoBuscado">Objeto Treino com as informações atualizadas.</param>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.DAO.TreinoDAO.BuscaPorTexto(System.String)">
+            <summary>
+            Busca por treinos com base em um texto de pesquisa.
+            </summary>
+            <param name="nome">Texto a ser usado como critério de pesquisa.</param>
+            <returns>Lista de objetos Treino que correspondem ao critério de pesquisa.</returns>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.DAO.TreinoDAO.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um treino por seu ID único.
+            </summary>
+            <param name="id">ID único do treino.</param>
+            <returns>Objeto Treino correspondente ao ID fornecido.</returns>
+        </member>
+        <member name="T:MegaGyn.Infra.Data.ExercicioRepository">
+            <summary>
+            Implementação do repositório de exercícios.
+            </summary>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.ExercicioRepository.#ctor">
+            <summary>
+            Construtor padrão que inicializa o ExercicioDAO.
+            </summary>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.ExercicioRepository.Adicionar(MegaGyn.Domain.Exercicio)">
+            <summary>
+            Adiciona um novo exercício.
+            </summary>
+            <param name="exercicio">O exercício a ser adicionado.</param>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.ExercicioRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um exercício pelo ID.
+            </summary>
+            <param name="id">O ID do exercício a ser buscado.</param>
+            <returns>O exercício encontrado.</returns>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.ExercicioRepository.Atualizar(System.Int32)">
+            <summary>
+            Atualiza as informações de um exercício.
+            </summary>
+            <param name="id">O ID do exercício a ser atualizado.</param>   
+        </member>
+        <member name="M:MegaGyn.Infra.Data.ExercicioRepository.BuscarTodos">
+            <summary>
+            Busca todos os exercícios.
+            </summary>
+            <returns>Uma lista de todos os exercícios.</returns>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.ExercicioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um exercício pelo ID.
+            </summary>
+            <param name="id">O ID do exercício a ser deletado.</param>
+        </member>
+        <member name="T:MegaGyn.Infra.Data.TreinoRepository">
+            <summary>
+            Implementação do repositório de treinos.
+            </summary>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.TreinoRepository.#ctor">
+            <summary>
+            Construtor padrão que inicializa o TreinoDAO.
+            </summary>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.TreinoRepository.Adicionar(MegaGyn.Domain.Treino)">
+            <summary>
+            Adiciona um novo treino.
+            </summary>
+            <param name="treino">O treino a ser adicionado.</param>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.TreinoRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um treino pelo ID.
+            </summary>
+            <param name="id">O ID do treino a ser buscado.</param>
+            <returns>O treino encontrado.</returns>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.TreinoRepository.Atualizar(System.Int32)">
+            <summary>
+            Atualiza as informações de um treino.
+            </summary>
+            <param name="id">O ID do treino a ser atualizado.</param> 
+        </member>
+        <member name="M:MegaGyn.Infra.Data.TreinoRepository.BuscarTodos">
+            <summary>
+            Busca todos os treinos.
+            </summary>
+            <returns>Uma lista de todos os treinos.</returns>
+        </member>
+        <member name="M:MegaGyn.Infra.Data.TreinoRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um treino pelo ID.
+            </summary>
+            <param name="id">O ID do treino a ser deletado.</param>
+        </member>
+    </members>
+</doc>

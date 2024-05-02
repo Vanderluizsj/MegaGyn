@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MegaGyn.API</name>
+    </assembly>
+    <members>
+        <member name="T:MegaGyn.API.Controllers.AlunoController">
+            <summary>
+            Controlador para lidar com operações relacionadas aos alunos.
+            </summary>
+        </member>
+        <member name="M:MegaGyn.API.Controllers.AlunoController.AdicionarAluno(MegaGyn.Domain.Aluno)">
+            <summary>
+            Adiciona um novo aluno.
+            </summary>
+            <param name="aluno">O aluno a ser adicionado.</param>
+            <returns>O resultado da operação.</returns>
+        </member>
+        <member name="M:MegaGyn.API.Controllers.AlunoController.BuscarTodos">
+            <summary>
+            Busca todos os alunos.
+            </summary>
+            <returns>Uma lista de todos os alunos.</returns>
+        </member>
+        <member name="M:MegaGyn.API.Controllers.AlunoController.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um aluno pelo ID.
+            </summary>
+            <param name="id">O ID do aluno.</param>
+            <returns>O aluno encontrado.</returns>
+        </member>
+        <member name="M:MegaGyn.API.Controllers.AlunoController.Atualizar(MegaGyn.Domain.Aluno)">
+            <summary>
+            Atualiza as informações de um aluno.
+            </summary>
+            <param name="editado">O aluno com as informações atualizadas.</param>
+            <returns>O resultado da operação.</returns>
+        </member>
+        <member name="M:MegaGyn.API.Controllers.AlunoController.Deletar(System.Int32)">
+            <summary>
+            Deleta um aluno pelo ID.
+            </summary>
+            <param name="id">O ID do aluno a ser deletado.</param>
+            <returns>O resultado da operação.</returns>
+        </member>
+        <member name="T:MegaGyn.API.Controllers.ExercicioController">
+            <summary>
+            Controlador para lidar com operações relacionadas aos exercícios.
+            </summary>
+        </member>
+        <member name="M:MegaGyn.API.Controllers.ExercicioController.AdicionarExercicio(MegaGyn.Domain.Exercicio)">
+            <summary>
+            Adiciona um novo exercício.
+            </summary>
+            <param name="exercicio">O exercício a ser adicionado.</param>
+            <returns>O resultado da operação.</returns>
+        </member>
+        <member name="M:MegaGyn.API.Controllers.ExercicioController.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um exercício pelo ID.
+            </summary>
+            <param name="id">O ID do exercício.</param>
+            <returns>O exercício encontrado.</returns>
+        </member>
+        <member name="M:MegaGyn.API.Controllers.ExercicioController.Atualizar(MegaGyn.Domain.Exercicio)">
+            <summary>
+            Atualiza as informações de um exercício.
+            </summary>
+            <param name="editado">O exercício com as informações atualizadas.</param>
+            <returns>O resultado da operação.</returns>
+        </member>
+        <member name="M:MegaGyn.API.Controllers.ExercicioController.BuscarTodos">
+            <summary>
+            Busca todos os exercícios.
+            </summary>
+            <returns>Uma lista de todos os exercícios.</returns>
+        </member>
+        <member name="M:MegaGyn.API.Controllers.ExercicioController.Deletar(System.Int32)">
+            <summary>
+            Deleta um exercício pelo ID.
+            </summary>
+            <param name="id">O ID do exercício a ser deletado.</param>
+            <returns>O resultado da operação.</returns>
+        </member>
+        <member name="T:MegaGyn.API.Controllers.TreinoController">
+            <summary>
+            Controlador para lidar com operações relacionadas aos treinos.
+            </summary>
+        </member>
+        <member name="M:MegaGyn.API.Controllers.TreinoController.AdicionarTreino(MegaGyn.Domain.Treino)">
+            <summary>
+            Adiciona um novo treino.
+            </summary>
+            <param name="treino">O treino a ser adicionado.</param>
+            <returns>O resultado da operação.</returns>
+        </member>
+        <member name="M:MegaGyn.API.Controllers.TreinoController.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um treino pelo ID.
+            </summary>
+            <param name="id">O ID do treino.</param>
+            <returns>O treino encontrado.</returns>
+        </member>
+        <member name="M:MegaGyn.API.Controllers.TreinoController.Atualizar(MegaGyn.Domain.Treino)">
+            <summary>
+            Atualiza as informações de um treino.
+            </summary>
+            <param name="editado">O treino com as informações atualizadas.</param>
+            <returns>O resultado da operação.</returns>
+        </member>
+        <member name="M:MegaGyn.API.Controllers.TreinoController.BuscarTodos">
+            <summary>
+            Busca todos os treinos.
+            </summary>
+            <returns>Uma lista de todos os treinos.</returns>
+        </member>
+        <member name="M:MegaGyn.API.Controllers.TreinoController.Deletar(System.Int32)">
+            <summary>
+            Deleta um treino pelo ID.
+            </summary>
+            <param name="id">O ID do treino a ser deletado.</param>
+            <returns>O resultado da operação.</returns>
+        </member>
+    </members>
+</doc>

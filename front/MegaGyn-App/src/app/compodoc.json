@@ -1,0 +1,7 @@
+{
+    "title": "Documentação da Minha Aplicação Angular",
+    "input": "src/app",
+    "output": "docs",
+    "theme": "readthedocs"
+  }
+  

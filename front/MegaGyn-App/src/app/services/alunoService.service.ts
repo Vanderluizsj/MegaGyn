@@ -11,7 +11,7 @@ export class AlunoService {
 
   constructor(private http: HttpClient) {}
 
-  public getAluno(): Observable<IAluno[]> {
+  public getAlunos(): Observable<IAluno[]> {
     return this.http.get<IAluno[]>(this.baseURL);
   }
 

@@ -32,8 +32,7 @@ export class TreinoComponent implements OnInit {
   public validation(): void {
     this.form = this.fb.group({
       id: ['', [Validators.required]], 
-      nomeTreino: ['',  [Validators.required]] ,
-      idExercicio: ['', [Validators.required]],     
+      nomeTreino: ['',  [Validators.required]] ,   
     });
   }
   public resetForm(): void{
@@ -42,7 +41,9 @@ export class TreinoComponent implements OnInit {
   public vForm(): boolean {
     return this.form.valid; 
   }
-
+  public adicionarExercicio(): void {
+    this.treino.idExercicio
+  }
   public salvarAlteracao(): void {
     if (this.form.valid) {
 
